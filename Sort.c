@@ -1,3 +1,12 @@
+/*
+MAKING A CODE FOR IMPLEMENTING THE SORTING ALGORITHMS:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+*/
+
 #include <stdio.h>
 void insertion_sort(int arr[], int n);
 void selection_sort(int arr[], int n);
@@ -6,14 +15,15 @@ void merge_sort(int arr[], int n);
 void quick_sort(int arr[], int low, int high);
 int partition(int arr[], int low, int high);
 void swap(int *a, int *b);
+
 int main()
 {
-    //taking input of the length of the array
+    // taking input of the length of the array
     int n;
     printf("Enter number of element in the array: ");
     scanf("%d", &n);
 
-    //taking the array input
+    // taking the array input
     int a[n];
     printf("Enter the elements of the array: ");
     for (int i = 0; i < n; i++)
@@ -21,14 +31,14 @@ int main()
         scanf("%d", &a[i]);
     }
 
-    //before sorting
+    // before sorting
     printf("Before sorting array elements are --> \n");
     for (int i = 0; i < n; i++)
     {
         printf("%d ", a[i]);
     }
 
-    //choosing algorithm for the sort
+    // choosing algorithm for the sort
     printf("\nChoose the following option:\n1. Selection Sort\n2. Insertion Sort\n3. Bubble Sort\n4. Merge Sort\n5. Quick Sort\n");
     int choice;
     scanf("%d", &choice);
@@ -51,9 +61,10 @@ int main()
         break;
     }
 
-    //printing the sorted array
+    // printing the sorted array
     printf("Sorted array is : \n");
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         printf("%d ", a[i]);
     }
     return 0;
@@ -66,7 +77,7 @@ void swap(int *a, int *b)
     *b = t;
 }
 
-//quick sortw
+// quick sortw
 void quick_sort(int arr[], int low, int high)
 {
     if (low < high)
@@ -83,7 +94,7 @@ void quick_sort(int arr[], int low, int high)
     }
 }
 
-//partition function
+//partion function
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
@@ -109,8 +120,7 @@ int partition(int arr[], int low, int high)
     return (i + 1);
 }
 
-
-//insertion sort
+// insertion sort
 void insertion_sort(int arr[], int n)
 {
     int i, j, temp;
@@ -127,8 +137,7 @@ void insertion_sort(int arr[], int n)
     }
 }
 
-
-//merge sort
+// merge sort
 void merge_sort(int arr[], int n)
 {
     int i, j, k, m, temp[n];
@@ -153,7 +162,7 @@ void merge_sort(int arr[], int n)
     }
 }
 
-//bubble sort
+// bubble sort
 void bubble_sort(int arr[], int n)
 {
     int i, j, temp;
@@ -171,7 +180,7 @@ void bubble_sort(int arr[], int n)
     }
 }
 
-//selection sort
+// selection sort
 void selection_sort(int arr[], int n)
 {
     int i, j, min, temp;
@@ -191,3 +200,14 @@ void selection_sort(int arr[], int n)
         }
     }
 }
+
+
+
+/*
+CS LAB CS230
+Lab 1
+
+SUBMITTED BY:
+ASMIT GANGULY
+2101CS87
+*/
