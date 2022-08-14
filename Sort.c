@@ -65,3 +65,46 @@ void swap(int *a, int *b)
     *a = *b;
     *b = t;
 }
+
+//quick sortw
+void quick_sort(int arr[], int low, int high)
+{
+    if (low < high)
+    {
+
+        // find the pivot element such that elements smaller than pivot are on left of pivot and elements greater than pivot are on right of pivot
+        int pi = partition(arr, low, high);
+
+        // recursive call on the left of pivot
+        quick_sort(arr, low, pi - 1);
+
+        // recursive call on the right of pivot
+        quick_sort(arr, pi + 1, high);
+    }
+}
+
+//partition function
+int partition(int arr[], int low, int high)
+{
+    int pivot = arr[high];
+    int i = low - 1;
+
+    for (int j = low; j < high; j++)
+    {
+        if (arr[j] <= pivot)
+        {
+
+            // if element smaller than pivot is found
+            // swap it with the greater element pointed by i
+            i++;
+
+            // swap element at i with element at j
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    // swap the pivot element with the greater element at i
+    swap(&arr[i + 1], &arr[high]);
+
+    // return the partition point
+    return (i + 1);
+}
