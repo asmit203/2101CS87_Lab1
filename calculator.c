@@ -1,3 +1,14 @@
+/*
+MAKING A BASIC CALCULATOR TO DO FOLLOWING OPERATIONS:
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulus
+6. Power
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -54,3 +65,13 @@ int main()
     }
     return 0;
 }
+
+
+/*
+CS LAB CS230
+Lab 1
+
+SUBMITTED BY:
+ASMIT GANGULY
+2101CS87
+*/
