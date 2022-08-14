@@ -127,3 +127,29 @@ void insertion_sort(int arr[], int n)
     }
 }
 
+
+//merge sort
+void merge_sort(int arr[], int n)
+{
+    int i, j, k, m, temp[n];
+    if (n > 1)
+    {
+        m = n / 2;
+        merge_sort(arr, m);
+        merge_sort(arr + m, n - m);
+        for (i = 0, j = m, k = 0; k < n; k++)
+        {
+            if (j >= n)
+                temp[k] = arr[i++];
+            else if (i >= m)
+                temp[k] = arr[j++];
+            else if (arr[i] < arr[j])
+                temp[k] = arr[i++];
+            else
+                temp[k] = arr[j++];
+        }
+        for (i = 0; i < n; i++)
+            arr[i] = temp[i];
+    }
+}
+
